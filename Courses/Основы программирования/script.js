@@ -1,6 +1,6 @@
-alert ("Hello, World!");
+alert ("Hello, World!"); //просто вывод сообщения на экран
 
-var name = prompt("Enter your name: ");
+var name = prompt("Enter your name: "); //тег var обозначает переменную, в которую мы заключем какое либо значение
 alert ("Hello" + name);
 
 var a = prompt("Enter 1st number: ");
