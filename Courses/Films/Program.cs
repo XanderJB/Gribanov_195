@@ -26,11 +26,7 @@ namespace Films
             {
                 Console.WriteLine("Южный парк");
                 Console.WriteLine("Гриффины");
-                Console.WriteLine("Симпсоны");
-            }
-            else if (genre == "приколы") // срабатывает блок else если пользовател выбирает Сериалы
-            {
-                Console.WriteLine("Иди в попу, я фея))))))");
+                Console.WriteLine("Симпсоны")
             }
             else // срабатывает блок else если пользовател выбирает Сериалы
             {
