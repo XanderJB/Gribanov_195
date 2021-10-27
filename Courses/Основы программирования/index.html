@@ -5,20 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My page</title>
-    <link href="//fonts.googleapis.com/css?family=Roboto|Open+Sans:200,300,400,700,800,900&amp;subset=latin" rel="preload" as="font" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Yanone+Kaffeesatz:wght@300;400;500&display=swap');
+        </style>
     <link rel="stylesheet" href="./style.css"/>
+    <script>
+        function conv(){
+            var rouble = prompt("Введите сумму в рублях: "); //сумма в рублях которую вводит пользователь
+              var dollar = 70.38; //сегодняшний курс доллара
+             var euro = 81.66; //сегодняшний курс евро
+
+                rouble = parseInt(rouble); //передаем численные значения в рубль
+
+                var Itog = rouble / dollar; //вычисление количества рублей в долларах
+                var Itog_1 = rouble / euro; 
+                alert("Итого: " + Itog.toFixed(2) + " долларов" +  "\nИтого: " + Itog_1.toFixed(2) + " евро");
+        }
+    </script>
+
+    <script>
+        function trap_area(){
+            var baseLength_1 = prompt("Введите длину основания трапеции а: "); //пользователь вводит длину первого основания трапеции
+var baseLength_2 = prompt("Введите длину основания трапеции b: "); //пользователь вводит длину второго основания трапеции
+var trapezoidHeight = prompt("Введите высоту трапеции h: "); //пользователь вводит высоту трапеции
+
+baseLength_1 = parseInt(baseLength_1); //мы передаем в переменные a, b, h численные значения
+baseLength_2 = parseInt(baseLength_2);
+trapezoidHeight = parseInt(trapezoidHeight);
+
+var trapezoidArea = trapezoidHeight*(baseLength_1+baseLength_2)/2; //мы задаем компьютеру формулу, по которой он должен посчитать площадь трапеции
+alert("Площадь трапеции равна " + trapezoidArea); //вывод значения площади трапеции
+        }
+    </script>
+
+    <script>
+        function calc(){
+            var a = prompt("Enter 1st number: ");
+var b = prompt("Enter 2nd number: ");
+a = parseInt(a);
+b = parseInt(b);
+
+c = a + b;
+alert ("Сумма чисел равна: " + c);
+
+c = a - b;
+alert ("Разность чисел равна: " + c);
+
+c = a * b;
+alert ("Произведение чисел равно: " + c);
+
+c = a / b;
+alert ("Частное чисел равно: " + c.toFixed(2));
+
+c = (a + b) / 2;
+alert ("Среднее арифметическое чисел равно: " + c);
+        }
+    </script>
+
+    <script>
+        function game(){
+            var userAnswer = prompt("C чем вкуснее есть котлетки?")
+var score = 0
+userAnswer.toLowerCase();
+if (userAnswer == "с пюрешкой" || userAnswer == "просто так" || userAnswer == "с хлебом"){
+    alert ("Вы угадали, ура)")
+    score++
+}else{
+    alert("Вы не угадали")
+}
+userAnswer = prompt("что видят с закрытыми глазами?")
+userAnswer.toLowerCase();
+if (userAnswer == "сны" || userAnswer == "сон" || userAnswer == "сновидения"){
+    alert ("Вы угадали, ура)")
+    score++
+}else{
+    alert("Вы не угадали")
+    
+}
+userAnswer = prompt("что бьют лентяи?")
+userAnswer.toLowerCase();
+if (userAnswer == "баклуши" || userAnswer == "груши"){
+    alert ("Вы угадали, ура)")
+    score++
+}else{
+    alert("Вы не угадали")
+    
+}
+var HighScore = score
+if (score == 3){
+    alert("Ваше количество баллов: " + score + ". Поздравляю, вы выиграли")
+}else if (score == 1 || score == 2){
+    alert("Ваше количество баллов: " + score + 
+   ". Вы играли хорошо, но можете еще лучше. Попробуйте еще раз.")
+}
+else{
+    alert("К сожалению, вы не набрали ни одного балла и проиграли. Попробуйте еще раз.")
+}
+
+        }
+    </script>
 </head>
 <body>
-    <h1>Всем привет, меня зовут Александр. Я изучаю язык программирования JavaScript. <br>
-        Вот примеры моих работ</h1>
-    <button onclick = "window.location.href = 'file://C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80/Desktop/js/page_1.html'">Конвертер</button>
-    <button onclick = "window.location.href = 'file://C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80/Desktop/js/page_2.html'">Площадь трапеции</button>
-    <button onclick = "window.location.href = 'file://C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80/Desktop/js/page_3.html'">Калькулятор</button>
-    <button onclick = "window.location.href = 'file://C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80/Desktop/js/page_4.html'">Игра</button>
+    <h1>Всем привет, меня зовут Александр. Я изучаю язык программирования JavaScript.</h1>
+    <div class="round"></div>
+        <h1>Вот примеры моих работ<br>
+        Чтобы просмотреть их, нажмите на кнопки снизу</h1>
 
-    <h1>Связаться со мной и посмотреть мои работы:</h1>
-    <a href="https://vk.com/sanya_gribanov"><img src="./pic/site/vk.jpg" alt="Мой ВК (для связи добавляйтесь в друзья)"></a><br>
-    <a href="https://github.com/XanderJB"><img src="./pic/site/gh.png" alt="Мой GitHub"></a>
+     <button class="sliding-button" onclick="conv()" title="конвертер">Конвертер</button>
+    <button class="sliding-button" onclick = "trap_area()" title="счетчик площади трапеции">Счетчик площади трапеции</button>
+    <button class="sliding-button" onclick = "calc()" title="калькулятор">Калькулятор</button>
+    <button class="sliding-button" onclick = "game()" title="игра">Игра</button>
+    <div class="text">
+        <h1>Связаться со мной и посмотреть мои работы:</h1>
+    </div>
     
+        <ul class="social-icons-1">
+            <li><a href="https://vk.com/sanya_gribanov"><img src="./pic/site/vk.jpg" alt="vk"/></a></li>
+            <li><a href="https://github.com/XanderJB"><img src="./pic/site/github.jpg" alt="vk"/></a></li>
+            <li><a href="https://discord.gg/dTc29p6F"><img src="./pic/site/discord.png" alt="vk"/></a></li>
+        </ul>
+        
 </body>
 </html>
