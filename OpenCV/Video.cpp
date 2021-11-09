@@ -1,3 +1,4 @@
+#include "opencv2/highgui/highgui.hpp"
 #include <opencv2/opencv.hpp>
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
@@ -11,19 +12,19 @@
 using namespace cv;
 using namespace std;
 
-int Main()
+int main()
 {
-	//установка рус локали для консроли
+	//СѓСЃС‚Р°РЅРѕРІРєР° СЂСѓСЃ Р»РѕРєР°Р»Рё РґР»СЏ РєРѕРЅСЃРѕР»Рё
 	setlocale(LC_ALL, "Russian");
-
+	
 	char filename[100]; //video
-	cout << "Введите имя файла, который хотите открыть, и нажмите Enter" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р°, РєРѕС‚РѕСЂС‹Р№ С…РѕС‚РёС‚Рµ РѕС‚РєСЂС‹С‚СЊ, Рё РЅР°Р¶РјРёС‚Рµ Enter" << endl;
 	cin.getline(filename, 100);
-	cout << "Открыт файл ";
+	cout << "РћС‚РєСЂС‹С‚ С„Р°Р№Р» ";
 	cout << filename << endl;
-
+	
 	VideoCapture cap(filename);
-	if (!cap.isOpened()) { cout << "Ошибка открытия файла "; return -1; }
+	if (!cap.isOpened()) { cout << "РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р° "; return -1; }
 	Mat im;
 	for (;;)
 	{
@@ -32,7 +33,7 @@ int Main()
 		mat = frame;
 		if (mat.empty()) break;
 
-		imshow("Распознавание", frame);
+		imshow("Р Р°СЃРїРѕР·РЅР°РІР°РЅРёРµ", frame);
 		if (waitKey(30) >= 0) break;
 	}
 	return 0;
