@@ -1,4 +1,6 @@
 # OpenCV
+ССылка на Гугл диск - https://drive.google.com/file/d/1t3We2LqmzUMeG7Y_13r8LMm76LUvqvNp/view?usp=sharing 
+
 Задание 1: нахождение контуров изображения<br>
 	0) настроить проект с opencv. рисование окна<br>
 	1) найти изображение и сохранить в папке проекта с .срр<br>
